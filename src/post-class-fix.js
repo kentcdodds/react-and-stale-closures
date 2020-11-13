@@ -6,9 +6,11 @@ import {PostView} from './post-view'
 class Post extends React.Component {
   static contextType = AppContext
   handleLikeClick = async () => {
-    if (!(await canLike(this.props.post, this.context.user))) return
+    const {post} = this.props
+    const {user, toggleLike} = this.context
+    if (!(await canLike(post, user))) return
 
-    this.context.toggleLike(this.props.post)
+    toggleLike(post)
   }
   render() {
     return (

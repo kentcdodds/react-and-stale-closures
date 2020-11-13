@@ -6,13 +6,13 @@ import {PostView} from './post-view'
 function Post({post}) {
   const {user, toggleLike} = useApp()
 
-  async function handleClick() {
+  async function handleLikeClick() {
     if (!(await canLike(post, user))) return
 
     toggleLike(post)
   }
 
-  return <PostView post={post} onLikeClick={handleClick} />
+  return <PostView post={post} onLikeClick={handleLikeClick} />
 }
 
 export {Post}

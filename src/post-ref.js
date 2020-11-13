@@ -11,13 +11,13 @@ function Post({post}) {
     postRef.current = post
   })
 
-  async function handleClick() {
+  async function handleLikeClick() {
     if (!(await canLike(postRef.current, user))) return
 
     toggleLike(postRef.current)
   }
 
-  return <PostView post={post} onLikeClick={handleClick} />
+  return <PostView post={post} onLikeClick={handleLikeClick} />
 }
 
 export {Post}

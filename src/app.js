@@ -3,6 +3,7 @@ import {useApp} from './provider'
 import {Post as Class} from './post-class'
 import {Post as Ref} from './post-ref'
 import {Post as Default} from './post-default'
+import {Post as ClassFix} from './post-class-fix'
 
 function Posts({Post, currentPost, onPostClick}) {
   const {posts} = useApp()
@@ -45,26 +46,54 @@ function App() {
         </div>
       </div>
       <hr />
-      <h1>The Old Default (Classes)</h1>
+      <h1>
+        <span role="img" aria-label="x">
+          ❌
+        </span>{' '}
+        The Old Default with Classes
+      </h1>
       <Posts
         Post={Class}
         currentPost={currentPost}
         onPostClick={p => setCurrentPost(p)}
       />
       <hr />
-      <h1>The New Default (Hooks)</h1>
+      <h1>
+        <span role="img" aria-label="check">
+          ✅
+        </span>{' '}
+        The New Default with Hooks
+      </h1>
       <Posts
         Post={Default}
         currentPost={currentPost}
         onPostClick={p => setCurrentPost(p)}
       />
       <hr />
-      <h1>Simulating The Old Default with Hooks</h1>
+      <h1>
+        <span role="img" aria-label="x">
+          ❌
+        </span>{' '}
+        Simulating The Old Default with Hooks
+      </h1>
       <Posts
         Post={Ref}
         currentPost={currentPost}
         onPostClick={p => setCurrentPost(p)}
       />
+      <hr />
+      <h1>
+        <span role="img" aria-label="check">
+          ✅
+        </span>{' '}
+        Simulating The New Default with Classes
+      </h1>
+      <Posts
+        Post={ClassFix}
+        currentPost={currentPost}
+        onPostClick={p => setCurrentPost(p)}
+      />
+      <hr />
     </div>
   )
 }
