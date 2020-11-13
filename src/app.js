@@ -38,6 +38,11 @@ function App() {
           <li>Then change the post ASAP</li>
           <li>Observe the differences</li>
         </ol>
+        <div>
+          <a href="https://github.com/kentcdodds/react-and-stale-closures">
+            Code on GitHub
+          </a>
+        </div>
       </div>
       <hr />
       <h1>The Old Default (Classes)</h1>
