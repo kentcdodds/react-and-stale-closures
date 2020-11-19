@@ -6,3 +6,5 @@ annoyance.
 [Demo](https://react-and-stale-closures.netlify.app/)
 
 Blog post: [How React Uses Closures to Avoid Bugs](https://epicreact.dev/how-react-uses-closures-to-avoid-bugs)
+
+[Play with this on codesandbox](https://githubbox.com/kentcdodds/react-and-stale-closures)
