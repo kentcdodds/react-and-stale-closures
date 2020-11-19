@@ -44,6 +44,12 @@ function App() {
             Code on GitHub
           </a>
         </div>
+        <div>
+          {`Blog Post: `}
+          <a href="https://epicreact.dev/how-react-uses-closures-to-avoid-bugs">
+            How React Uses Closures to Avoid Bugs
+          </a>
+        </div>
       </div>
       <hr />
       <h1>
